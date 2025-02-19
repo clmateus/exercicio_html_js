@@ -1,4 +1,4 @@
-const btnEnviar = document.querySelector('#btn-enviar')
+const formNumeros = document.querySelector('#form-numeros')
 
 function comparaNumeros(num1, num2) {
     if(num1 > num2) {
@@ -8,17 +8,23 @@ function comparaNumeros(num1, num2) {
     }
 }
 
-btnEnviar.addEventListener('click', function(e){
+formNumeros.addEventListener('submit', function(e){
     e.preventDefault()
 
     const campoNumero1 = document.querySelector('#input-numero-1')
     const campoNumero2 = document.querySelector('#input-numero-2')
     const campoMensagem = document.querySelector('.div-mensagem')
-    const resultado = comparaNumeros(campoNumero1.value, campoNumero2.value)
+    let resultado = comparaNumeros(campoNumero1.value, campoNumero2.value)
 
     if(resultado){
-        campoMensagem.innerHTML += `<p>asd</p>`
+        campoMensagem.classList.remove('error')
+        campoMensagem.classList.add('success')
+        campoMensagem.innerHTML = `<p>Formulário válido</p>`
+        campoNumero1.value = ""
+        campoNumero2.value = ""
     } else {
-        campoMensagem.innerHTML += `<p>cvxvx</p>`
+        campoMensagem.classList.remove('sucess')
+        campoMensagem.classList.add('error')
+        campoMensagem.innerHTML = `<p>Formulário inválido</p>`
     }
 })

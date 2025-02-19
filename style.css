@@ -37,3 +37,18 @@ form button:hover {
     cursor: pointer;
     
 }
+
+.div-mensagem {
+    margin-top: 8px;
+    padding: 8px;
+}
+
+.success {
+    background-color: rgb(60, 212, 60);
+    color: #fff;
+}
+
+.error {
+    background-color: rgb(216, 45, 45);
+    color: #fff;
+}
