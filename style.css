@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 18px;
+}
+
+input {
+    width: 49%;
+    /* display: block; */
+    padding: 16px;
+    margin-bottom: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 16px;
+    background-color: rgb(60, 212, 60);
+    border: none;
+}
+
+form button:hover {
+    background-color: rgb(60, 185, 60);
+    cursor: pointer;
+    
+}
